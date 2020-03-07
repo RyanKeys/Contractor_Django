@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<h3>
+  Recent Listings {% if listing %}<small class="text-muted"
+    >({{ listing|length }} Page{{ listing|length|pluralize:"s" }})</small
+  >{% endif %}
+</h3>
+<hr />
+{% if listing %}
+<div class="card-columns">
+  {% for i in listing %} {% include "partials/card.html" %} {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-primary" role="alert">No listing to display.</div>
+{% endif %} {% endblock %}
