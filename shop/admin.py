@@ -3,6 +3,6 @@ from shop.models import Listing
 # Register your models here.
 
 class ListingAdmin(admin.ModelAdmin):
-    list_display = ('title', 'publisher', 'slug','created')
+    list_display = ('title', 'description', 'publisher', 'slug','created')
 
 admin.site.register(Listing, ListingAdmin)

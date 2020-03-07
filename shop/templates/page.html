@@ -4,11 +4,13 @@
     <h3>
       {{ page.title }}
       <small class="text-muted"
-        >Last updated {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} by
-        <b>{{ page.author.username }}</b></small
+        >Last updated {{ page.created|date:"SHORT_DATETIME_FORMAT" }} by
+        <b>{{ page.publisher }}</b></small
       >
     </h3>
     <hr />
+    {{page.picture}}
+    <img src="{{ page.picture.url }}" alt="{{page.title}}" />
     <p>{{ page.content|linebreaksbr }}</p>
     <hr />
     <a href="{% url 'item-list-page' %}">Back to List</a>

@@ -26,7 +26,9 @@
       {% if user.is_authenticated %}
       <form class="form-inline ml-auto">
         <div class="text-white">Hello, <strong>{{ user }}</strong>!</div>
-        <a href="#" class="btn btn-success ml-4">New Page</a>
+        <a href="{% url 'item-create' %}" class="btn btn-success ml-4"
+          >New Page</a
+        >
         <a href="{% url 'logout' %}" class="btn btn-danger ml-2">Log Out</a>
         {% else %}
         <a href="{% url 'login' %}" class="btn btn-secondary ml-2">Log In</a>

@@ -2,9 +2,14 @@
   <h5 class="card-header ">{{ i.title }}</h5>
   <div class="card-body border-dark">
     <p class="card-text text-dark"></p>
-
+    <img
+      style="max-width:100%; max-height:100%;"
+      src="{{i.picture.url}}"
+      alt=""
+    />
     <hr />
     <div class="text-right">
+      <p>{{i.description}}</p>
       <a href="{% url 'shop-details-page' i.slug %}" title="Read More"
         >Read More</a
       >
