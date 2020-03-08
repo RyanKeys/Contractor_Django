@@ -1,1 +1,1 @@
-web: gunicorn contractor_django.wsgi
+web: gunicorn contractor_django.wsgi __log-file -
