@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn contractor_django.wsgi
